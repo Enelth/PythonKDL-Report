@@ -41,13 +41,17 @@ Chúng ta sẽ trình bày ngắn gọn mô hình này bằng cách tải một 
 \lstinputlisting[language=Python]{SourceCode/loadbart.py}
 
 Ví dụ, chúng ta sẽ sử dụng bài báo tin tức sau, được xuất bản trên CNN vào ngày 24 tháng 10 năm 2023, với tiêu đề "Bobi, the world's oldest dog ever, died aged 31". Lưu ý rằng đây là một bài báo tin tức hoàn toàn mới mà chúng ta đưa vào mô hình, để có thể xem nó hoạt động như thế nào.\\
-\pagebreak
-\begin{figure*}[htp]
-    \centering
-    \includegraphics[scale=.7]{images/news.png}
-    \caption{Tóm tắt bài báo}
-    \end{figure*}
 
+\lstinputlisting[language=Python]{SourceCode/new.py}
+
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=16cm, height=2cm]{images/kq}
+
+\end{figure}
+
+\pagebreak
 Bạn có thể quan sát thấy rằng mô hình có thể tạo ra một đoạn văn bản ngắn gọn hơn rất nhiều, chứa đựng thông tin quan trọng nhất từ văn bản đầu vào. Đây là một ví dụ tóm tắt thành công.
 
 Tuy nhiên, mô hình này đã được huấn luyện chủ yếu trên các tập dữ liệu bao gồm nhiều bài báo tin tức từ CNN và Daily Mail, chứ không phải trên nhiều dữ liệu hội thoại. Vì vậy, chúng ta sẽ tiến hành tinh chỉnh nó với SamSum dataset.
